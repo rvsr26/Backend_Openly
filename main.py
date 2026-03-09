@@ -181,6 +181,7 @@ app.add_middleware(
         "https://openly-frontend.vercel.app",
         os.getenv("FRONTEND_URL", "http://localhost:3000")
     ],
+    allow_origin_regex=r"https://.*\.netlify\.app|https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -457,7 +458,7 @@ async def get_user_by_any_id(user_id: str):
 
 @app.get("/")
 def read_root():
-    return {"message": "Openly Backend is LIVE (MongoDB)", "version": "1.0.0"}
+    return {"message": "Openly Backend is LIVE (MongoDB)", "version": "1.0.1"}
 
 # ==================== AUTHENTICATION ENDPOINTS ====================
 
