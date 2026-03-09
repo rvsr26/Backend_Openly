@@ -18,7 +18,7 @@ python-dotenv==1.0.1
 # AI/ML for content moderation
 --extra-index-url https://download.pytorch.org/whl/cpu
 transformers==4.48.2
-torch>=2.0.0+cpu
+torch==2.5.1+cpu
 scikit-learn==1.6.1
 google-generativeai
 
